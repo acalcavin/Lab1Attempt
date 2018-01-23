@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class CalculatePerimeterAndArea {
+
+	public static void main(String[] args) {
+
+		Scanner scnr = new Scanner(System.in);
+
+		double roomLength;
+		double roomWidth;
+		double roomArea;
+		double roomPerimeter;
+		//String userReply = "y";
+		char userChar = 'y';
+
+		System.out.println("Welcome to Grand Circus' Room Detail Generator!");
+
+		while ((userChar == 'y') || (userChar == 'Y')) {
+		
+			System.out.println("Enter Length:");
+			roomLength = scnr.nextDouble();
+
+			System.out.println("Enter Width:");
+			roomWidth = scnr.nextDouble();
+
+			roomArea = roomLength * roomWidth;
+
+			System.out.println("Area: " + roomArea);
+
+			roomPerimeter = 2 * (roomLength + roomWidth);
+
+			System.out.println("Perimeter: " + roomPerimeter);
+
+			System.out.println();
+
+			System.out.println("Continue? (y/n):");
+			
+			userChar = scnr.next().charAt(0);
+			
+			System.out.println();
+
+		}
+
+	}
+
+}
